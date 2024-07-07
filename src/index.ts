@@ -1,7 +1,12 @@
+import cors from 'cors';
+
+
 import express, { Request, Response } from "express";
 
 const app = express();
-
+app.use(cors({
+  origin: "*",
+}))
 import userRouter from "./routers/user";
 import refferalRouter from "./routers/referrer";
 import dotenv from "dotenv";
